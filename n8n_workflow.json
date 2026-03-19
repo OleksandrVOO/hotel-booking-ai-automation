@@ -1,0 +1,93 @@
+{
+  "name": "Instagram AI Bot Aivengo",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 20
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [112, -272],
+      "id": "YOUR_NODE_ID",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://graph.facebook.com/v21.0/me/conversations?platform=instagram&limit=1&fields=messages{message,from,timestamp}&access_token=YOUR_META_ACCESS_TOKEN",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [340, -280],
+      "id": "YOUR_NODE_ID",
+      "name": "Get Last Message"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.message }}",
+              "operation": "contains",
+              "value2": "Менеджер"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [560, -280],
+      "id": "YOUR_NODE_ID",
+      "name": "Check Escalation"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "action",
+              "value": "check_availability"
+            },
+            {
+              "name": "data",
+              "value": "={{ $json.message }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [780, -100],
+      "id": "YOUR_NODE_ID",
+      "name": "Google Sheets Logic"
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get Last Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
