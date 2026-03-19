@@ -1,6 +1,6 @@
 # hotel-booking-ai-automation
 AI-powered Instagram agent for automated hotel booking logic. Built with n8n, Google Sheets, and Meta Graph API.
-# AI Hotel Administrator for "Aivengo Sherwood" Complex 🏨🤖
+# AI Hotel Administrator for "Aivengo Sherwood" Complex.
 
 A professional, high-logic AI Agent designed to automate the full cycle of guest relations for a boutique hotel complex. This agent acts as a Digital Administrator, offloading over 50% of routine tasks from the human staff.
 
