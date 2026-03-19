@@ -25,5 +25,7 @@ The system includes a dedicated UI element on the [official website](https://aiv
 - **Google Sheets:** Dynamic database for inventory, pricing, and calendar management.
 - **OpenAI/Gemini:** The "brain" behind natural language understanding.
 
+![n8n Workflow Architecture](assets/n8n_hotel_workflow.png)
+
 ---
 *Note: This repository showcases the architecture and business logic. API keys and private database credentials have been removed for security.*
