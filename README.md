@@ -8,7 +8,7 @@ A professional, high-logic AI Agent designed to automate the full cycle of guest
 - **24/7 Availability:** Instant responses to guest inquiries at any time.
 - **Admin Support:** Automatically checks cottage availability and makes entries in the manager's calendar.
 - **Seamless Integration:** Featured on the official website via an "AI Administrator" button, directing traffic straight to Instagram Direct for a personalized experience.
-
+- **Real-time Admin Notifications: Integrated with Telegram Bot API to instantly alert human staff about new booking entries or urgent "Manager/Operator" requests. This ensures zero-miss communication and rapid human intervention when needed.
 ## 🌟 Key Capabilities
 - **Availability & Booking:** Synchronizes with Google Sheets to provide real-time information on free dates and cottages. 
 - **Knowledge Base:** Expertly answers questions about the complex: directions/location, internal rules, cottage amenities, and local services.
