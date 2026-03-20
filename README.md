@@ -1,4 +1,4 @@
-# hotel-booking-ai-automation
+![n8n Workflow Architecture](assets/n8n_hotel_workflow.png)
 AI-powered Instagram agent for automated hotel booking logic. Built with n8n, Google Sheets, and Meta Graph API.
 # AI Hotel Administrator for "Aivengo Sherwood" Complex.
 
@@ -24,8 +24,6 @@ The system includes a dedicated UI element on the [official website](https://aiv
 - **Instagram Graph API:** Official communication channel.
 - **Google Sheets:** Dynamic database for inventory, pricing, and calendar management.
 - **OpenAI/Gemini:** The "brain" behind natural language understanding.
-
-![n8n Workflow Architecture](assets/n8n_hotel_workflow.png)
 
 ---
 *Note: This repository showcases the architecture and business logic. API keys and private database credentials have been removed for security.*
